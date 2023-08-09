@@ -16,7 +16,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div className='absolute right-5 bg-slate-100'>Bem vindo</div>
+        {children}
+      </body>
     </html>
   )
 }
