@@ -1,59 +1,59 @@
 'use client'
 
-import * as SelectPrimite from '@radix-ui/react-select'
+import * as SelectPrimitive from '@radix-ui/react-select'
 import { Check, ChevronDown } from 'lucide-react'
 
 // interface SelectProps {}
 
 export function Select() {
   return (
-    <SelectPrimite.Root>
-      <SelectPrimite.Trigger className="flex h-11 w-full items-center justify-between gap-2 rounded-lg border border-zinc-300 px-3 py-2 shadow-sm data-[placeholder]:text-zinc-600">
-        <SelectPrimite.Value
+    <SelectPrimitive.Root>
+      <SelectPrimitive.Trigger className="flex h-11 w-full items-center justify-between gap-2 rounded-lg border border-zinc-300 px-3 py-2 shadow-sm data-[placeholder]:text-zinc-600">
+        <SelectPrimitive.Value
           className="text-black"
           placeholder="Select a country..."
         />
-        <SelectPrimite.Icon>
+        <SelectPrimitive.Icon>
           <ChevronDown className="h-5 w-5 text-zinc-500" />
-        </SelectPrimite.Icon>
-      </SelectPrimite.Trigger>
+        </SelectPrimitive.Icon>
+      </SelectPrimitive.Trigger>
 
-      <SelectPrimite.Portal>
-        <SelectPrimite.Content
+      <SelectPrimitive.Portal>
+        <SelectPrimitive.Content
           side="bottom"
           position="popper"
           sideOffset={8}
           className="z-10 w-[--radix-select-trigger-width] overflow-hidden rounded-lg border border-zinc-200 bg-white"
         >
-          <SelectPrimite.Viewport>
-            <SelectPrimite.Item
+          <SelectPrimitive.Viewport>
+            <SelectPrimitive.Item
               className="flex items-center justify-between gap-2 px-3 py-2.5 outline-none data-[highlighted]:bg-zinc-50"
               value="br"
             >
-              <SelectPrimite.ItemText className="text-black">
+              <SelectPrimitive.ItemText className="text-black">
                 Brazil
-              </SelectPrimite.ItemText>
+              </SelectPrimitive.ItemText>
 
-              <SelectPrimite.ItemIndicator>
+              <SelectPrimitive.ItemIndicator>
                 <Check className="h-4 w-4 text-violet-500" />
-              </SelectPrimite.ItemIndicator>
-            </SelectPrimite.Item>
+              </SelectPrimitive.ItemIndicator>
+            </SelectPrimitive.Item>
 
-            <SelectPrimite.Item
+            <SelectPrimitive.Item
               className="flex items-center justify-between gap-2 px-3 py-2.5 outline-none data-[highlighted]:bg-zinc-50"
               value="us"
             >
-              <SelectPrimite.ItemText className="text-black">
+              <SelectPrimitive.ItemText className="text-black">
                 United States
-              </SelectPrimite.ItemText>
+              </SelectPrimitive.ItemText>
 
-              <SelectPrimite.ItemIndicator>
+              <SelectPrimitive.ItemIndicator>
                 <Check className="h-4 w-4 text-violet-500" />
-              </SelectPrimite.ItemIndicator>
-            </SelectPrimite.Item>
-          </SelectPrimite.Viewport>
-        </SelectPrimite.Content>
-      </SelectPrimite.Portal>
-    </SelectPrimite.Root>
+              </SelectPrimitive.ItemIndicator>
+            </SelectPrimitive.Item>
+          </SelectPrimitive.Viewport>
+        </SelectPrimitive.Content>
+      </SelectPrimitive.Portal>
+    </SelectPrimitive.Root>
   )
 }
